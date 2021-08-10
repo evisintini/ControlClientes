@@ -22,15 +22,15 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" name="email" required>
+                        <input type="email" class="form-control" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono</label>
-                        <input type="text" class="form-control" name="telefono" required>
+                        <input type="tel" class="form-control" name="telefono" required>
                     </div>
                     <div class="form-group">
                         <label for="saldo">Saldo</label>
-                        <input type="text" class="form-control" name="saldo" required>
+                        <input type="number" class="form-control" name="saldo" required>
                     </div>
                 </div>
                 <div class="modal-footer">
