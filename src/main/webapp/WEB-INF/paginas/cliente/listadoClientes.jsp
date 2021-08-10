@@ -26,9 +26,10 @@
                         </thead>
                         <tbody>
                             <!-- Iteramos cada elemento de la lista de clientes -->
-                            <c:forEach var="cliente" items="${clientes}">
+                            <c:forEach var="cliente" items="${clientes}" varStatus="status">
                                 <tr>
-                                    <td>${cliente.idCliente}</td>
+                                   <!--  <td>$ {cliente.idCliente}</td> Esto sirve para mostrar el id de la base de datos, en vez de un valor autoincremental como está puesto en la linea de abajo--> 
+                                    <td>${status.count}</td>
                                     <td>${cliente.nombre} ${cliente.apellido}</td>
                                     <td> <fmt:formatNumber value="${cliente.saldo}" type="currency"/> </td>
                                     <td>
