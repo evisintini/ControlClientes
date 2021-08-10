@@ -74,7 +74,7 @@ public class ServletControlador extends HttpServlet {
         String telefono = request.getParameter("telefono");
         double saldo = 0;
         String saldoString = request.getParameter("saldo");
-        if (saldoString != null && "".equals(saldoString)) {
+        if (saldoString != null && !"".equals(saldoString)) {
             saldo = Double.parseDouble(saldoString);
         }
         

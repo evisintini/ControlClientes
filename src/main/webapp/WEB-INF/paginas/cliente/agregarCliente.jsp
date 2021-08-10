@@ -4,7 +4,7 @@
             <div class="modal-header bg-info text-white">
                 <h5 class="modal-title">Agregar Cliente</h5>
                 <button class="close" data-dismiss="modal">
-                    <span>&t&times;</span>
+                    <span>&times;</span>
                 </button>
             </div>
             
