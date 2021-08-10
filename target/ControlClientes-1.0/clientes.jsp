@@ -3,7 +3,7 @@
     Created on : 9 ago. 2021, 11:24:47
     Author     : 2w50 111606 Ezequiel Favio Visintini
 --%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,11 +24,8 @@
         <!-- Botones de Navegación -->
         <jsp:include page="WEB-INF/paginas/comunes/botonesNavegacion.jsp"/>
 
-        <ul>
-            <c:forEach var="cliente" items="${clientes}">
-                <li>${cliente.idCliente} ${cliente.nombre} ${cliente.apellido} ${cliente.saldo}</li>
-            </c:forEach>
-        </ul>
+        <!-- Listado de clientes -->
+        <jsp:include page="WEB-INF/paginas/cliente/listadoClientes.jsp"/>
         
         <!-- Pie de página -->
         <jsp:include page="WEB-INF/paginas/comunes/piePagina.jsp"/>

@@ -26,7 +26,17 @@ public class ServletControlador extends HttpServlet{
         List<Cliente> clientes = new ClienteDaoJDBC().listar();
         System.out.println("clientes = " + clientes);
         request.setAttribute("clientes", clientes); //entre paréntesis pongo el nombre de la lista, que es el que voy a poner como "items" en el jsp clientes.jsp. A la derecha el nombre de la lista que estoy insertando en ese nombre, que se lo doy en la linea -List<Cliente> --> clientes <-- = new ClienteDaoJDBC().listar();- 
+        request.setAttribute("totalClientes", clientes.size());
+        request.setAttribute("saldoTotal", this.calcularSaldoTotal(clientes));
         request.getRequestDispatcher("clientes.jsp").forward(request, response);
+    }
+    
+    private double calcularSaldoTotal(List<Cliente> clientes){
+        double saldoTotal = 0;
+        for (Cliente cliente : clientes) {
+            saldoTotal += cliente.getSaldo();
+        }
+        return saldoTotal;
     }
     
 }
